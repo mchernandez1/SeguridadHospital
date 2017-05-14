@@ -1,4 +1,15 @@
 <application>
+  <component name="localAnalysisScripts">
+    <option name="beans">
+      <list>
+        <LocalAnalysisScript>
+          <option name="name" value="java-only" />
+          <option name="pathToSonarReport" value="$WORKING_DIR/target/sonar/sonar-report.json" />
+          <option name="sourceCode" value="gradle sonarqube -DskipTests=true -Dsonar.language=java -Dsonar.analysis.mode=preview -Dsonar.report.export.path=sonar-report.json -Dsonar.host.url=http://localhost:9000" />
+        </LocalAnalysisScript>
+      </list>
+    </option>
+  </component>
   <component name="sonarServers">
     <option name="beans">
       <list>
@@ -9,7 +20,7 @@
           <option name="user" value="admin" />
         </SonarServerConfig>
         <SonarServerConfig>
-          <option name="hostUrl" value="http://localhost:9000" />
+          <option name="hostUrl" value="http://localhost9000" />
           <option name="name" value="local2" />
           <option name="passwordChanged" value="true" />
           <option name="user" value="admin" />
